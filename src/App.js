@@ -32,11 +32,23 @@ function App() {
   }
   // printpassedname("ghost")
   // type 4
+
   function add(a,b){
-    const result = a + b;
+    const result = a+b;
     return result;
   }
-  
+  function add(a,b){
+    const result = a-b;
+    return result;
+  }
+  function add(a,b){
+    const result = a*b;
+    return result;
+  }
+  function add(a,b){
+    const result = a/b;
+    return result;
+  }
 
   /**
  * for ( initialization ; condition ; increment/dcreament){
@@ -82,6 +94,25 @@ function App() {
   profiles.map((profiles)=>{
     console.log(profiles.name,profiles.age)
   });
+
+  //function
+  function add(a,b){
+    const result = a+b;
+    return result;
+  }
+  function sub(a,b){
+    const result = a-b;
+    return result;
+  }
+  function mul(a,b){
+    const result = a*b;
+    return result;
+  }
+  function div(a,b){
+    const result = a/b;
+    return result;
+  }
+
   
 
   return (
@@ -92,6 +123,10 @@ function App() {
       <p>age:-{age}</p>
       <p>verified:-{(verified==true)? "yes" : "no"}</p>
       <p>result:-{add(10,10)}</p>
+      <p>result add: {add(2,2)}</p>
+      <p>result sub: {sub(2,2)}</p>
+      <p>result mul: {mul(2,2)}</p>
+      <p>result div: {div(2,2)}</p>
     </div>
   );
 }
