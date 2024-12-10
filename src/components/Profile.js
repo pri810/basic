@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-function Profile({ name, location }) {
+function Profile({profile}) {
+  
     return (
         // <div>
         // <p>Name :{name}</p>
@@ -8,14 +9,14 @@ function Profile({ name, location }) {
         // </div>
 
         <Card style={{width: '18rem'}} className='col-md-4'>
-            <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/111479652?s=48&v=4" />
+            <Card.Img variant="top" src={profile.img}/>
             <Card.Body >
-                <Card.Title >prince</Card.Title>
+                <Card.Title ><h2>{profile.name}</h2></Card.Title>
                 <Card.Text >
-                    i am studying BSCIT!!!!!
+                    {profile.desc}
                 </Card.Text>
-                <a variant="primary" href='https://github.com/pri810/basic'>
-                   <Button>open Profile</Button> 
+                <a variant="primary" href={profile.link} target='_'>
+                   <Button>{profile.btn}</Button> 
                 </a>
             </Card.Body>
         </Card>
